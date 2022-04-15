@@ -1,4 +1,4 @@
-<footer class="site-footer">
+    <footer class="site-footer">
       <div class="container">
         <p class="copyright">© Кекс, 2019</p>
         <ul class="navigation-list">
