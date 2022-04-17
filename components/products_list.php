@@ -12,22 +12,23 @@
       <?php endfor; ?>
     </ol>
      <ul class="products-list">
-      <?php foreach($products_on_page as $i => $item): ?>
-      <li>
-        <a class="product-card"  href="product.php?product_id=<?= $i ?>">
-          <h3><?= $item['title'] ?></h3>
-          <img src="<?= $item['img_url'] ?>" width="156" height="120" alt="<?= $item['title'] ?>">
-          <div class="product-options">
-            <span class="price"><?= $item['price'] ?></span>
-            <ul class="colors-list">
-              <?php foreach ($item['colors'] as $color): ?>
-              <li class="color-<?= $color ?>"></li>
-              <?php endforeach;?>
-            </ul>
-          </div>
-        </a>
-      </li>
-      <?php endforeach; ?>
+         <?php //foreach($products_on_page as $i => $item): ?>
+         <?php while($item = $result->fetch()) {?>
+          <li>
+            <a class="product-card"  href="product.php?product_id=<?= $item[id] ?>">
+              <h3><?= $item['title'] ?></h3>
+              <img src="<?= $item['img_url'] ?>" width="156" height="120" alt="<?= $item['title'] ?>">
+              <div class="product-options">
+                <span class="price"><?= $item['price'] ?></span>
+                <ul class="colors-list">
+                  <?php foreach (explode(', ', $item['colors']) as $color): ?>
+                  <li class="color-<?= $color ?>"></li>
+                  <?php endforeach;?>
+                </ul>
+              </div>
+            </a>
+          </li>
+      <?php }; ?>
     </ul>
   </div>
 </section>
