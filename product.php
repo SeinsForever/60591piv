@@ -10,8 +10,6 @@ if ($is_violet_tuesday) {
   require('components/product_violet.php');
 }
 
-hello
-
 require('components/product_info.php');
 require('components/footer.php');
 
