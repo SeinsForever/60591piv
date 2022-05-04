@@ -4,7 +4,7 @@
     <form method="post" action="..\product_add.php" enctype="multipart/form-data">
         <p>Наименование</p>
         <label for="id1">
-            <input type="text" name="title" id="id1">
+            <input type="text" name="title" id="id1" class="specie">
         </label>
 
         <p>Цена</p>

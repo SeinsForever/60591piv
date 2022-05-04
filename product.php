@@ -1,5 +1,5 @@
 <?php
-//require('products_db.php');
+require('auth.php');
 require('components/header.php');
 require('dbdconnect.php');
 

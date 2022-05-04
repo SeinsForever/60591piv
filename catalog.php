@@ -1,4 +1,5 @@
 <?php
+require('auth.php');
 require('products_db.php');
 require('dbdconnect.php');
 
