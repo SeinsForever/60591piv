@@ -19,8 +19,12 @@
             <?php
             if($_SESSION['username'])
             {
-                echo(' <li><a href="product_add.php">Добавить продукт</a></li>');
+                if($_SESSION['is_admin'] == 1)
+                {
+                    echo(' <li><a href="product_add.php">Добавить продукт</a></li>');
+                }
                 echo('<li><a href="login.php?logout=1">'.$_SESSION['username'].' (выйти)</a></li>');
+                echo('<li><a href="order.php"> Корзина</a></li>');
             }
             else
             {
